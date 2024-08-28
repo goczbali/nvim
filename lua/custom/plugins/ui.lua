@@ -21,28 +21,33 @@ return {
       require('which-key').setup()
 
       -- Document existing key chains
-      require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-        ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-        ['<leader>g'] = { name = '[G]it Hunk', _ = 'which_key_ignore' },
-
-        ['<leader>'] = {
-          h = '[H]arpoon',
-          a = 'Harpoon Add Buffer',
-          j = 'Harpoon 1st Buffer',
-          k = 'Harpoon 2nd Buffer',
-          l = 'Harpoon 3rd Buffer',
-          [';'] = 'Harpoon 4th Buffer',
-        },
+      require('which-key').add {
+        { '<leader>;', desc = 'Harpoon 4th Buffer' },
+        { '<leader>a', desc = 'Harpoon Add Buffer' },
+        { '<leader>c', group = '[C]ode' },
+        { '<leader>c_', hidden = true },
+        { '<leader>d', group = '[D]ocument' },
+        { '<leader>d_', hidden = true },
+        { '<leader>g', group = '[G]it Hunk' },
+        { '<leader>g_', hidden = true },
+        { '<leader>h', desc = '[H]arpoon' },
+        { '<leader>j', desc = 'Harpoon 1st Buffer' },
+        { '<leader>k', desc = 'Harpoon 2nd Buffer' },
+        { '<leader>l', desc = 'Harpoon 3rd Buffer' },
+        { '<leader>r', group = '[R]ename' },
+        { '<leader>r_', hidden = true },
+        { '<leader>s', group = '[S]earch' },
+        { '<leader>s_', hidden = true },
+        { '<leader>t', group = '[T]oggle' },
+        { '<leader>t_', hidden = true },
+        { '<leader>w', group = '[W]orkspace' },
+        { '<leader>w_', hidden = true },
       }
+
       -- visual mode
-      require('which-key').register({
-        ['<leader>g'] = { 'Git [H]unk' },
-      }, { mode = 'v' })
+      require('which-key').add {
+        { '<leader>g', desc = '[G]it Hunk' },
+      }
     end,
   },
 
