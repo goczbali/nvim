@@ -18,6 +18,12 @@ return {
       -- vim.cmd.colorscheme 'tokyonight-night'
       vim.cmd.colorscheme 'tokyonight-night'
 
+      -- Disable undercurl and replace it with an underline
+      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { undercurl = false, underline = true, sp = '#db4b4b' }) -- Red for errors
+      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', { undercurl = false, underline = true, sp = '#e0af68' }) -- Yellow for warnings
+      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', { undercurl = false, underline = true, sp = '#0db9d7' }) -- Blue for info
+      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { undercurl = false, underline = true, sp = '#10b981' }) -- Green for hints
+
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
