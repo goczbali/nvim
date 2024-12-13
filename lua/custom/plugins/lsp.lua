@@ -240,13 +240,6 @@ return {
           lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
         }
       end,
-      formatters = {
-        texfmt = {
-          command = 'tex-fmt',
-          args = { '$FILENAME' },
-          stdin = false,
-        },
-      },
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
@@ -259,7 +252,6 @@ return {
         typescriptreact = { 'prettier' },
         javascript = { 'prettier' },
         javascriptreact = { 'prettier' },
-        tex = { 'texfmt' },
       },
     },
   },
