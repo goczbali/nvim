@@ -8,9 +8,18 @@ return {
     -- 'catppuccin/nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
-      -- require('catppuccin').setup {
-      --   flavour = 'latte',
-      -- }
+      require('tokyonight').setup {
+        on_highlights = function(hl, _)
+          hl.DiagnosticUnderlineError.undercurl = nil
+          hl.DiagnosticUnderlineError.underline = true
+          hl.DiagnosticUnderlineWarn.undercurl = nil
+          hl.DiagnosticUnderlineWarn.underline = true
+          hl.DiagnosticUnderlineInfo.undercurl = nil
+          hl.DiagnosticUnderlineInfo.underline = true
+          hl.DiagnosticUnderlineHint.undercurl = nil
+          hl.DiagnosticUnderlineHint.underline = true
+        end,
+      }
 
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
@@ -19,10 +28,10 @@ return {
       vim.cmd.colorscheme 'tokyonight-night'
 
       -- Disable undercurl and replace it with an underline
-      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { undercurl = false, underline = true, sp = '#db4b4b' }) -- Red for errors
-      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', { undercurl = false, underline = true, sp = '#e0af68' }) -- Yellow for warnings
-      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', { undercurl = false, underline = true, sp = '#0db9d7' }) -- Blue for info
-      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { undercurl = false, underline = true, sp = '#10b981' }) -- Green for hints
+      -- vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { undercurl = false, underline = true, sp = '#db4b4b' }) -- Red for errors
+      -- vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', { undercurl = false, underline = true, sp = '#e0af68' }) -- Yellow for warnings
+      -- vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', { undercurl = false, underline = true, sp = '#0db9d7' }) -- Blue for info
+      -- vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { undercurl = false, underline = true, sp = '#10b981' }) -- Green for hints
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
