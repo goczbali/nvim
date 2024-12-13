@@ -28,7 +28,7 @@ return {
         { '<leader>c_', hidden = true },
         { '<leader>d', group = '[D]ocument' },
         { '<leader>d_', hidden = true },
-        { '<leader>g', group = '[G]it Hunk' },
+        { '<leader>g', group = '[G]it' },
         { '<leader>g_', hidden = true },
         { '<leader>h', desc = '[H]arpoon' },
         { '<leader>j', desc = 'Harpoon 1st Buffer' },
@@ -46,7 +46,7 @@ return {
 
       -- visual mode
       require('which-key').add {
-        { '<leader>g', desc = '[G]it Hunk' },
+        { '<leader>g', desc = '[G]it' },
       }
     end,
   },
