@@ -6,3 +6,4 @@ vim.o.softtabstop = 4
 local npairs = require 'mini.pairs'
 -- Remove the single quote pair from tex filetype
 npairs.unmap('i', "'", "'")
+npairs.unmap('i', '(', ')')

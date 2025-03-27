@@ -163,16 +163,16 @@ return {
   s({ trig = 'eqv', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
     t '\\equiv',
   }, { condition = in_mathzone }),
-  s({ trig = 'C', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
+  s({ trig = 'CC', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
     t '\\C',
   }, { condition = in_mathzone }),
-  s({ trig = 'F', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
+  s({ trig = 'FF', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
     t '\\F',
   }, { condition = in_mathzone }),
   s({ trig = 'HH', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
     t '\\HH',
   }, { condition = in_mathzone }),
-  s({ trig = 'N', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
+  s({ trig = 'NN', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
     t '\\N',
   }, { condition = in_mathzone }),
   s({ trig = 'PP', wordTrig = false, regTrig = true, snippetType = 'autosnippet' }, {
@@ -607,11 +607,11 @@ return {
     { trig = 'ss', snippetType = 'autosnippet' },
     fmta(
       [[
-        \begin{equation*}
+        \begin{equation}
             \begin{split}
                 <>
             \end{split}
-        \end{equation*}
+        \end{equation}
       ]],
       {
         i(1),
