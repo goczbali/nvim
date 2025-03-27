@@ -12,7 +12,7 @@ return {
     statuscolumn = { enabled = true },
     words = { enabled = true },
     lazygit = { configure = true },
-    dashboard = { example = 'advanced' },
+    dashboard = { example = 'doom' },
     terminal = {},
   },
   config = function(_, opts)
